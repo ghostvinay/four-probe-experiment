@@ -1,0 +1,19 @@
+h1 {
+  color: red;
+  margin-top: 30px;
+  text-align: center;
+}
+div.buttons {
+  width: 400px;
+  padding: 50px;
+  margin: auto;
+}
+
+div.button {
+  background-color: lightgrey;
+  width: auto;
+  border: 1px solid green;
+  padding: auto;
+  margin-top: 10px;
+  text-align: center;
+}

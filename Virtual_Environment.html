@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Four Probe Experiment</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="script/script.js"></script>
+  </head>
+  <body>
+    <h1>Four Probe Experiment</h1>
+    <div class="Sections_and_Environment">
+      <div class="Sections">
+        <div class="sub-section">
+          <button type="button" name="button1" class="sub-section-button" onclick=aim()>Aim of The Experiment</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button2" class="sub-section-button" onclick=intro()>Introduction</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button2" class="sub-section-button" onclick=demo1()>Demo Video1</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button2" class="sub-section-button" onclick=demo2()>Demo Video2</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button3" class="sub-section-button">Apparatus Required</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button4" class="sub-section-button">Procedure</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button5" class="sub-section-button">Result</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button6" class="sub-section-button">Discussion</button>
+        </div>
+        <div class="sub-section">
+          <button type="button" name="button1" class="sub-section-button">Conclusion</button>
+        </div>
+      </div>
+      <div class="Environment" id="environment">
+        This is the environment
+      </div>
+      <div id="aim_env" hidden>
+        <h1 style="color: green">Aim of The Experiment</h1>
+        <p style="padding: 50px; font-size: 30px">To Study temperature dependence of resistivity in germanium (Ge) and to estimate
+          the electronic band gap (Eg) energy in Germanium (Ge) using Four-point probe setup
+          with furnace.</p>
+      </div>
+      <div id="intro_env" hidden>
+        <h1 style="color: green">Introduction</h1>
+        <p style="padding: 50px; font-size: 30px">Describe Introduction</p>
+      </div>
+      <div id="demo1_env" hidden>
+        <h1 style="color: green">Demo Video 1</h1>
+        <video width="900" controls style="margin-left: 90px">
+          <source src="video/Resistivity by Four Probe Method - Amrita University.mp4" type="video/mp4">
+          <source src="video/Resistivity by Four Probe Method - Amrita University.ogg" type="video/ogg">
+          Your browser does not support HTML video.
+        </video>
+        <p style="margin-left: 90px">Courtesy: <a href="https://www.youtube.com/watch?v=I9RmGM1kbs8" target="_blank">Amrita University</a></p>
+      </div>
+      <div id="demo2_env" hidden>
+        <h1 style="color: green">Demo Video 2</h1>
+        <video width="900" controls style="margin-left: 90px">
+          <source src="video/four probe.mp4" type="video/mp4">
+          <source src="video/four probe.ogg" type="video/ogg">
+          Your browser does not support HTML video.
+        </video>
+        <p style="margin-left: 90px">Courtesy: IIT Bhubaneswar</a></p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
