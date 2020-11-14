@@ -23,10 +23,10 @@
           <button type="button" name="button2" class="sub-section-button" onclick=demo2()>Demo Video2</button>
         </div>
         <div class="sub-section">
-          <button type="button" name="button3" class="sub-section-button">Apparatus Required</button>
+          <button type="button" name="button3" class="sub-section-button" onclick=appr()>Apparatus Required</button>
         </div>
         <div class="sub-section">
-          <button type="button" name="button4" class="sub-section-button">Procedure</button>
+          <button type="button" name="button4" class="sub-section-button" onclick=procedure()>Procedure</button>
         </div>
         <div class="sub-section">
           <button type="button" name="button5" class="sub-section-button">Result</button>
@@ -49,7 +49,7 @@
       </div>
       <div id="intro_env" hidden>
         <h1 style="color: green">Introduction</h1>
-        <p style="padding: 50px; font-size: 30px">Describe Introduction</p>
+        <p style="padding: 50px; font-size: 30px">Read the Introduction from the <a href="files/Four-Probe mannual .pdf" target="_blank">Manual</a></p>
       </div>
       <div id="demo1_env" hidden>
         <h1 style="color: green">Demo Video 1</h1>
@@ -68,6 +68,163 @@
           Your browser does not support HTML video.
         </video>
         <p style="margin-left: 90px">Courtesy: IIT Bhubaneswar</a></p>
+      </div>
+
+      <div id="app_req" hidden>
+        <h1 style="color: green">Apparatus Required</h1>
+        <p style="padding:`10px; font-size: 20px">Click on the following apparatus to see them.</p>
+        <div class="apparatus_button">
+          <div class="apparatus">
+            <button type="button" class="app_button" name="probe_arrangement" onclick=fpa()>Four Probe Arrangement</button>
+          </div>
+          <div class="apparatus">
+            <button type="button" class="app_button" name="Sample" onclick=sample()>Sample</button>
+          </div>
+          <div class="apparatus">
+            <button type="button" class="app_button" name="oven" onclick=oven()>Oven</button>
+          </div>
+          <div class="apparatus">
+            <button type="button" class="app_button" name="four_probe_set_up" onclick=setup()>Digital Probe Setup</button>
+          </div>
+        </div>
+        <div class="apparatus_image" id="image_region">
+          Image Will be shown here.
+        </div>
+        <div class="apparatus_image" id="probe_arrangement" hidden>
+          <img src="images/four_probe_arrangement.png" alt="img_four-probe_arrangement" width="700" height="400">
+        </div>
+        <div class="apparatus_image" id="Sample" hidden>
+          <h2>Available Sample</h2>
+          <ol>
+            <li>Germanium</li>
+            <li>Silicon</li>
+          </ol>
+        </div>
+        <div class="apparatus_image" id="oven" hidden>
+          <img src="images/oven.png" alt="img_oven" width="700" height="400">
+        </div>
+        <div class="apparatus_image" id="set-up" hidden>
+          <img src="images/set_up.png" alt="img_set_up" width="700" height="400">
+        </div>
+      </div>
+
+      <div id="procedure" hidden>
+        <h1 style="color: green">Procedure</h1>
+        <p style="padding:`10px; font-size: 20px">Click on step buttons to continue following the procedure.</p>
+        <div class="procedure_button">
+          <div class="step">
+            <button type="button" name="step1" class="step" onclick=ps1()>Step1</button>
+          </div>
+          <div class="step">
+            <button type="button" name="step2" class="step" onclick=ps2()>Step2</button>
+          </div>
+          <div class="step">
+            <button type="button" name="step3" class="step" onclick=ps3()>Step3</button>
+          </div>
+          <div class="step">
+            <button type="button" name="step4" class="step" onclick=ps4()>Step4</button>
+          </div>
+          <div class="step">
+            <button type="button" name="step5" class="step" onclick=ps5()>Step5</button>
+          </div>
+          <div class="step">
+            <button type="button" name="step6" class="step" onclick=ps6()>Step6</button>
+          </div>
+          <div class="step">
+            <button type="button" name="step7" class="step" onclick=ps7()>Step7</button>
+          </div>
+          <div class="step">
+            <button type="button" name="step8" class="step" onclick=ps8()>Step8</button>
+          </div>
+        </div>
+        <div class="procedure_env" id="step_region">
+          Steps will be shown here.
+        </div>
+        <div class="procedure_env" id="Step1" hidden>
+          <h1 style="color: green">Step 1</h1>
+          <p>Put the sample on the base plate of the four probe arrangement. Unscrew the pipe holding the
+            four probes and let the four probes rest in the middle of the sample. Apply a very gentle pressure
+            on the probes and tighten the pipe in this position. Check the continuity between the probes for
+            proper electrical contacts.</p>
+          <p>Caution: The Ge crystal is very brittle. Therefore, use only the minimum pressure required for
+            proper electrical contacts. The resistance between the Red and Black probes and Yellow and Green
+            probe may be approximately few K-Ohms (~1-4 K-Ohms). </p>
+          <button type="button" name="complete_step1" onclick=cs1()>Complete Step 1</button>
+        </div>
+        <div class="procedure_env" id="CStep1" hidden>
+          <img src="images/four_probe_arrangement.png" alt="step1_completed" width="700" height="400">
+        </div>
+        <div class="procedure_env" id="Step2" hidden>
+          <h1 style="color: green">Step 2</h1>
+          <p>Connect the outer pair of probes (red/black) leads to the constant current power supply and the
+          inner pair (yellow/green leads) to the probe voltage terminals.</p>
+          <button type="button" name="complete_step2" onclick=cs2()>Complete Step 2</button>
+        </div>
+        <div class="procedure_env" id="CStep2" hidden>
+          <img src="images/step2.png" alt="step2_comleted" width="700" height="400">
+        </div>
+        <div class="procedure_env" id="Step3" hidden>
+          <h1 style="color: green">Step 3</h1>
+          <p>Place the four probe arrangement in the oven and fix the thermometer in the oven through the
+            hole provided. </p>
+          <button type="button" name="complete_step3" onclick=cs3()>Complete Step 3</button>
+        </div>
+        <div class="procedure_env" id="CStep3" hidden>
+          <img src="images/step3.png" alt="step3_comleted" width="700" height="400">
+        </div>
+        <div class="procedure_env" id="Step4" hidden>
+          <h1 style="color: green">Step 4</h1>
+          <p>Switch on the ac mains of Four Probe Set-up and put the digital panel meter in the current
+            measuring mode through the selector switch. In this position LED facing mA would glow.
+            Adjust the current to a desired value</p>
+          <button type="button" name="complete_step4" onclick=cs4()>Complete Step 4</button>
+        </div>
+        <div class="procedure_env" id="CStep4" hidden>
+          <img src="images/step4.png" alt="step4_comleted" width="700" height="400">
+        </div>
+        <div class="procedure_env" id="Step5" hidden>
+          <h1 style="color: green">Step 5</h1>
+          <p>Switch on the ac mains of Four Probe Set-up and put the digital panel meter in the current
+            measuring mode through the selector switch. In this position LED facing mA would glow.
+            Adjust the current to a desired value</p>
+          <button type="button" name="complete_step5" onclick=cs5()>Complete Step 5</button>
+        </div>
+        <div class="procedure_env" id="CStep5" hidden>
+          <img src="images/step5.png" alt="step5_comleted" width="700" height="400">
+        </div>
+        <div class="procedure_env" id="Step6" hidden>
+          <h1 style="color: green">Step 6</h1>
+          <p>Please set the parameters in the following fields.</p>
+          <label for="material_selection">Choose the material:</label>
+          <select name="material_selection" id="material">
+            <option value="Ge">Germanium</option>
+            <option value="Si">Silicon</option>
+          </select>
+          <br><br>
+          <label for="current">Current in mA:</label>
+          <input type="float" id="current" name="current"><br><br>
+          <label for="probe_separation">Probe Separation in mm:</label>
+          <input type="float" id="separation" name="probe_separation"><br><br>
+          <label for="thickness_of_sample">Thickness in mm:</label>
+          <input type="float" id="thickness" name="thickness_of_sample"><br><br>
+          <label for="initial_T">Initial Temperature in K:</label>
+          <input type="float" id="iT" name="initial_T"><br><br>
+          <label for="final_T">Final Temperature in K:</label>
+          <input type="float" id="fT" name="final_T"><br><br>
+          <button type="button" name="complete_step6" onclick=cs6()>Save the Parameters</button>
+        </div>
+        <div class="procedure_env" id="Step7" hidden>
+          <h1 style="color: green">Step 7</h1>
+          <p>Use the following buttons to generate the experimental data and export the data.</p><br><br>
+          <button type="button" name="generate_data" onclick=generate()>Generate the observation</button><p style="color: red" id='calc_complete'></p><br><br>
+        </div>
+        <div class="procedure_env" id="Step8" hidden>
+          <h1 style="color: green">Step 8</h1>
+          <button type="button" name="see_data" onclick=see()>See the data</button><br><br>
+          <div class="table1" id="table">
+          </div>
+        </div>
+
       </div>
 
     </div>
