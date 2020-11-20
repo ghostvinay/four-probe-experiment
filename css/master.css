@@ -1,5 +1,13 @@
+body {
+  background-color: black;
+}
+
+a {
+  color: #0415F6;
+}
+
 h1 {
-  color: red;
+  color: #C0C9F2;
   margin-top: 30px;
   text-align: center;
 }
@@ -10,10 +18,16 @@ div.buttons {
 }
 
 div.button {
-  background-color: lightgrey;
+  background-color: #8EF6F5;
+  font-weight: bold;
+  border-radius: 25px;
   width: auto;
   border: 1px solid green;
   padding: auto;
   margin-top: 10px;
   text-align: center;
+}
+
+div.h1 {
+  color: red;
 }

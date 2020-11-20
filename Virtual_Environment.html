@@ -29,31 +29,31 @@
           <button type="button" name="button4" class="sub-section-button" onclick=procedure()>Procedure</button>
         </div>
         <div class="sub-section">
-          <button type="button" name="button5" class="sub-section-button">Result</button>
+          <button type="button" name="button5" class="sub-section-button" onclick=result()>Result</button>
         </div>
         <div class="sub-section">
-          <button type="button" name="button6" class="sub-section-button">Discussion</button>
+          <button type="button" name="button6" class="sub-section-button" onclick=discussion()>Discussion</button>
         </div>
         <div class="sub-section">
-          <button type="button" name="button1" class="sub-section-button">Conclusion</button>
+          <button type="button" name="button1" class="sub-section-button" onclick=conclusion()>Conclusion</button>
         </div>
       </div>
       <div class="Environment" id="environment">
-        This is the environment
+        <p>This is the environment</p>
       </div>
       <div id="aim_env" hidden>
-        <h1 style="color: green">Aim of The Experiment</h1>
+        <h1 id="env_header">Aim of The Experiment</h1>
         <p style="padding: 50px; font-size: 30px">To Study temperature dependence of resistivity in germanium (Ge) and to estimate
           the electronic band gap (Eg) energy in Germanium (Ge) using Four-point probe setup
           with furnace.</p>
       </div>
       <div id="intro_env" hidden>
-        <h1 style="color: green">Introduction</h1>
+        <h1 id="env_header">Introduction</h1>
         <p style="padding: 50px; font-size: 30px">Read the Introduction from the <a href="files/Four-Probe mannual .pdf" target="_blank">Manual</a></p>
       </div>
       <div id="demo1_env" hidden>
         <h1 style="color: green">Demo Video 1</h1>
-<!--        <video width="900" controls style="margin-left: 90px">
+      <!--        <video width="900" controls style="margin-left: 90px">
           <source src="video/Resistivity by Four Probe Method - Amrita University.mp4" type="video/mp4">
           <source src="video/Resistivity by Four Probe Method - Amrita University.ogg" type="video/ogg">
           Your browser does not support HTML video.
@@ -63,7 +63,7 @@
       </div>
       <div id="demo2_env" hidden>
         <h1 style="color: green">Demo Video 2</h1>
-<!--        <video width="900" controls style="margin-left: 90px">
+      <!--        <video width="900" controls style="margin-left: 90px">
           <source src="video/four probe.mp4" type="video/mp4">
           <source src="video/four probe.ogg" type="video/ogg">
           Your browser does not support HTML video.
@@ -73,7 +73,7 @@
       </div>
 
       <div id="app_req" hidden>
-        <h1 style="color: green">Apparatus Required</h1>
+        <h1 id="env_header">Apparatus Required</h1>
         <p style="padding:`10px; font-size: 20px">Click on the following apparatus to see them.</p>
         <div class="apparatus_button">
           <div class="apparatus">
@@ -90,7 +90,7 @@
           </div>
         </div>
         <div class="apparatus_image" id="image_region">
-          Image Will be shown here.
+          Image will be shown here.
         </div>
         <div class="apparatus_image" id="probe_arrangement" hidden>
           <img src="images/four_probe_arrangement.png" alt="img_four-probe_arrangement" width="700" height="400">
@@ -101,6 +101,10 @@
             <li>Germanium</li>
             <li>Silicon</li>
           </ol>
+          <div class="app_img">
+            <img src="images/germanium.jpg" alt="" class="sample_img">
+            <img src="images/silicon.jpg" alt="" class="sample_img">
+          </div>
         </div>
         <div class="apparatus_image" id="oven" hidden>
           <img src="images/oven.png" alt="img_oven" width="700" height="400">
@@ -111,7 +115,7 @@
       </div>
 
       <div id="procedure" hidden>
-        <h1 style="color: green">Procedure</h1>
+        <h1 id="env_header">Procedure</h1>
         <p style="padding:`10px; font-size: 20px">Click on step buttons to continue following the procedure.</p>
         <div class="procedure_button">
           <div class="step">
@@ -143,7 +147,7 @@
           Steps will be shown here.
         </div>
         <div class="procedure_env" id="Step1" hidden>
-          <h1 style="color: green">Step 1</h1>
+          <h1 id="env_header">Step 1</h1>
           <p>Put the sample on the base plate of the four probe arrangement. Unscrew the pipe holding the
             four probes and let the four probes rest in the middle of the sample. Apply a very gentle pressure
             on the probes and tighten the pipe in this position. Check the continuity between the probes for
@@ -157,7 +161,7 @@
           <img src="images/four_probe_arrangement.png" alt="step1_completed" width="700" height="400">
         </div>
         <div class="procedure_env" id="Step2" hidden>
-          <h1 style="color: green">Step 2</h1>
+          <h1 id="env_header">Step 2</h1>
           <p>Connect the outer pair of probes (red/black) leads to the constant current power supply and the
           inner pair (yellow/green leads) to the probe voltage terminals.</p>
           <button type="button" name="complete_step2" onclick=cs2()>Complete Step 2</button>
@@ -166,7 +170,7 @@
           <img src="images/step2.png" alt="step2_comleted" width="700" height="400">
         </div>
         <div class="procedure_env" id="Step3" hidden>
-          <h1 style="color: green">Step 3</h1>
+          <h1 id="env_header">Step 3</h1>
           <p>Place the four probe arrangement in the oven and fix the thermometer in the oven through the
             hole provided. </p>
           <button type="button" name="complete_step3" onclick=cs3()>Complete Step 3</button>
@@ -175,7 +179,7 @@
           <img src="images/step3.png" alt="step3_comleted" width="700" height="400">
         </div>
         <div class="procedure_env" id="Step4" hidden>
-          <h1 style="color: green">Step 4</h1>
+          <h1 id="env_header">Step 4</h1>
           <p>Switch on the ac mains of Four Probe Set-up and put the digital panel meter in the current
             measuring mode through the selector switch. In this position LED facing mA would glow.
             Adjust the current to a desired value</p>
@@ -185,7 +189,7 @@
           <img src="images/step4.png" alt="step4_comleted" width="700" height="400">
         </div>
         <div class="procedure_env" id="Step5" hidden>
-          <h1 style="color: green">Step 5</h1>
+          <h1 id="env_header">Step 5</h1>
           <p>Switch on the ac mains of Four Probe Set-up and put the digital panel meter in the current
             measuring mode through the selector switch. In this position LED facing mA would glow.
             Adjust the current to a desired value</p>
@@ -195,7 +199,7 @@
           <img src="images/step5.png" alt="step5_comleted" width="700" height="400">
         </div>
         <div class="procedure_env" id="Step6" hidden>
-          <h1 style="color: green">Step 6</h1>
+          <h1 id="env_header">Step 6</h1>
           <p>Please set the parameters in the following fields.</p>
           <label for="material_selection">Choose the material:</label>
           <select name="material_selection" id="material">
@@ -213,20 +217,40 @@
           <input type="float" id="iT" name="initial_T"><br><br>
           <label for="final_T">Final Temperature in K:</label>
           <input type="float" id="fT" name="final_T"><br><br>
+          <label for="interval_T">Step Temperature in K:</label>
+          <input type="float" id="sT" name="interval_T"><br><br>
           <button type="button" name="complete_step6" onclick=cs6()>Save the Parameters</button>
         </div>
         <div class="procedure_env" id="Step7" hidden>
-          <h1 style="color: green">Step 7</h1>
-          <p>Use the following buttons to generate the experimental data and export the data.</p><br><br>
+          <h1 id="env_header">Step 7</h1>
+          <p>Use the following buttons to generate the experimental data.</p><br><br>
           <button type="button" name="generate_data" onclick=generate()>Generate the observation</button><p style="color: red" id='calc_complete'></p><br><br>
         </div>
         <div class="procedure_env" id="Step8" hidden>
-          <h1 style="color: green">Step 8</h1>
+          <h1 id="env_header">Step 8</h1>
           <button type="button" name="see_data" onclick=see()>See the data</button><br><br>
+          <button id="export"onclick="exportTableToExcel('table','four-probe-observation')">Export</button>
           <div class="table1" id="table">
           </div>
         </div>
 
+      </div> <!-- End of procedure environment-->
+      <div id="result_env" hidden>
+        <h1 id="env_header">Result</h1>
+        <p style="padding: 50px; font-size: 30px">Note down the values of voltage and temperature from step 8 of procedure. Calculate the
+        resistivity following the method presented in the manual. Obtain a plot of natural logarithm of resistivity versus inverse of temperature.
+        Calculate the bandgap of the material from the slope of the plot.</p>
+      </div>
+
+      <div id="discussion_env" hidden>
+        <h1 id="env_header">Discussion</h1>
+        <p style="padding: 50px; font-size: 30px">Discuss your findings in your report.</p>
+      </div>
+
+      <div id="conclusion_env" hidden>
+        <h1 id="env_header">Conclusion</h1>
+        <p style="padding: 50px; font-size: 30px">Conclude the result obtained from the experiment. Mention the things you learnt fromt the experiment.
+        Write the precaution to take while performing the actual experiment in laboratory. Give suggestion to improve the experiment.</p>
       </div>
 
     </div>

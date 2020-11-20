@@ -3,6 +3,21 @@ function aim() {
   document.getElementById('environment').innerHTML = document.getElementById('aim_env').innerHTML;
 }
 
+//Function for result button
+function result() {
+  document.getElementById('environment').innerHTML = document.getElementById('result_env').innerHTML;
+}
+
+//Function for discussion button
+function discussion() {
+  document.getElementById('environment').innerHTML = document.getElementById('discussion_env').innerHTML;
+}
+
+//Function for conclusion button
+function conclusion() {
+  document.getElementById('environment').innerHTML = document.getElementById('conclusion_env').innerHTML;
+}
+
 //Function for intro of the experiment button
 function intro() {
   document.getElementById('environment').innerHTML = document.getElementById('intro_env').innerHTML;
@@ -109,11 +124,13 @@ function cs6() {
   w = parseFloat(document.getElementById('thickness').value)
   iT = parseFloat(document.getElementById('iT').value)
   fT = parseFloat(document.getElementById('fT').value)
+  dT = parseFloat(document.getElementById('sT').value)
   console.log(material);
   console.log(i);
   console.log(s);
   console.log(w);
-  console.log(typeof(iT));
+  console.log(iT);
+  console.log(fT);
   console.log(fT);
 }
 
@@ -124,8 +141,12 @@ function ps7() {
 
 // generate
 function generate() {
+  dataT = []
+  datav = []
   g7 = ((2*s)/w)*Math.log(2)
-  dT = 10
+  if (typeof(dT)=="undefined") {
+    dT = 10;
+  }
 
   if (material == 'Ge') {
     a = 3570
@@ -147,7 +168,7 @@ function generate() {
     rho = Math.exp(lnrho)
     rho_0 = g7*rho
     v = (rho_0*i)/(2*Math.PI*s)
-    //v = v + 0.001*(2*(Math.random())-1)
+    v = v + 0.05*v*(2*(Math.random())-1)
     dataT.push(t)
     datav.push(v)
     t = t+dT
@@ -167,9 +188,41 @@ function see() {
   for(var i=0; i < dataT.length; ++i) {
       htmlStr += "<tr>";
       htmlStr += "<th>" + dataT[i] + "</th>";
-      htmlStr += "<th>" + datav[i].toFixed(4) + "</th>";
+      htmlStr += "<th>" + datav[i].toFixed(8) + "</th>";
       htmlStr += "</tr>";
     }
     htmlStr += "</table>"
     document.getElementById('table').innerHTML = htmlStr
+}
+
+//Downloading the table
+function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+
+    // Create download link element
+    downloadLink = document.createElement("a");
+
+    document.body.appendChild(downloadLink);
+
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+        // Setting the file name
+        downloadLink.download = filename;
+
+        //triggering the function
+        downloadLink.click();
+    }
 }
