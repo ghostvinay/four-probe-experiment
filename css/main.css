@@ -136,7 +136,7 @@ tr:nth-child(even) {
 }
 div.table1 {
   overflow: scroll;
-  height: 350px;
+  height: 300px;
 }
 
 .sample_img {
