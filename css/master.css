@@ -11,6 +11,12 @@ h1 {
   margin-top: 30px;
   text-align: center;
 }
+
+h2 {
+  color: #C0C9F2;
+  margin-top: 30px;
+  text-align: center;
+}
 div.buttons {
   width: 400px;
   padding: 50px;
