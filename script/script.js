@@ -132,6 +132,12 @@ function cs6() {
   console.log(iT);
   console.log(fT);
   console.log(fT);
+  if (isNaN(i) || isNaN(s) || isNaN(w) || isNaN(iT) || isNaN(fT) || isNaN(dT)){
+    document.getElementById('save_alert').innerHTML = "Complete the above fields before saving."
+  } else {
+    document.getElementById('save_alert').innerHTML = "Parameters have been saved."
+  }
+
 }
 
 // Step 7 - Generate and export
